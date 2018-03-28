@@ -1,0 +1,45 @@
+/* var **/
+
+$layout-left-width: 270px;
+
+/* left **/
+
+.left {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: $layout-left-width;
+    height: 100%;
+    background: $brand-primary;
+    display: flex;
+    flex-direction: column;
+    @at-root {
+        #{&}-avator {
+            margin: auto auto 0;
+            width: 160px;
+            height: 160px;
+            background: #fff;
+        }
+        #{&}-menu {
+            margin: 30px auto auto;
+            ul {
+                li {
+                    a {
+                        color: rgba($color: #FFF, $alpha: 1.0)
+                    }
+                }
+            }
+        }
+    }
+}
+
+.right {
+    padding-left: $layout-left-width;
+    height: 100%;
+}
+
+.gallery-image img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
