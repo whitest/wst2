@@ -2,8 +2,11 @@
 // =========
 
 // Bootstrap can be removed entirely by deleting this line.
+$brand-primary: 		#bd5d38;
 
+@import "../theme/bootswatch-3.3.5-4/paper/_variables.scss";
 @import "bootstrap/bootstrap";
+@import "../theme/bootswatch-3.3.5-4/paper/_bootswatch.scss";
 
 // The easiest way to customise Bootstrap variables while
 // being able to easily override the source files with new
