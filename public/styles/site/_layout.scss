@@ -1,16 +1,17 @@
 /* var **/
 
 $layout-left-width: 270px;
+.layout {
+    height: 100vh;
+    overflow: hidden;
+    background: $brand-primary;
+}
+
 
 /* left **/
 
 .layout-left {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: $layout-left-width;
-    height: 100%;
-    background: $brand-primary;
+    // height: 100%;
     display: flex;
     flex-direction: column;
     @at-root {
@@ -37,21 +38,10 @@ $layout-left-width: 270px;
     }
 }
 
-@media (max-width: $screen-xs-max) {
-    .layout-left {
-        visibility: hidden;
-    }
-}
-
 .layout-right {
-    padding-left: $layout-left-width;
+    overflow-y: auto;
     height: 100%;
-}
-
-@media (max-width: $screen-xs-max) {
-    .layout-right {
-        padding-left: 0;
-    }
+    background: #FFF;
 }
 
 .gallery-image img {
