@@ -4,8 +4,8 @@ $layout-left-width: 270px;
 
 /* left **/
 
-.left {
-    position: absolute;
+.layout-left {
+    position: fixed;
     left: 0;
     top: 0;
     width: $layout-left-width;
@@ -25,7 +25,11 @@ $layout-left-width: 270px;
             ul {
                 li {
                     a {
-                        color: rgba($color: #FFF, $alpha: 1.0)
+                        color: rgba($color: #FFF, $alpha: 0.75);
+                        &:hover {
+                            color: rgba($color: #FFF, $alpha: 1.0);
+                            background: transparent;
+                        }
                     }
                 }
             }
@@ -33,9 +37,21 @@ $layout-left-width: 270px;
     }
 }
 
-.right {
+@media (max-width: $screen-xs-max) {
+    .layout-left {
+        visibility: hidden;
+    }
+}
+
+.layout-right {
     padding-left: $layout-left-width;
     height: 100%;
+}
+
+@media (max-width: $screen-xs-max) {
+    .layout-right {
+        padding-left: 0;
+    }
 }
 
 .gallery-image img {
