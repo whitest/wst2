@@ -1,55 +1,52 @@
-/* var **/
-
-$layout-left-width: 270px;
-.layout {
-    height: 100vh;
-    background: $brand-primary;
-}
-
-
-/* left **/
+.layout {}
 
 .layout-left {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    @at-root {
-        #{&}-avator {
-            margin: auto auto 30px;
-            width: 160px;
-            height: 160px;
-            background: #fff;
-            @media screen and (max-width: $screen-xs-max) {
-                display: none;
-            }
-        }
-        #{&}-menu {
-            margin: 0 auto auto;
-            ul {
-                li {
-                    a {
-                        color: rgba($color: #FFF, $alpha: 0.75);
-                        &:hover {
-                            color: rgba($color: #FFF, $alpha: 1.0);
-                            background: transparent;
-                        }
-                    }
-                }
-            }
-        }
-    }
+    overflow: auto;
+    position: fixed;
+    width: 220px;
+    height: 100vh;
+    background: $brand-primary;
     @media screen and (max-width: $screen-xs-max) {
+        position: relative;
+        width: 100%;
         height: auto;
     }
 }
 
-.layout-right {
-	min-height: 100%;
-    background: #FFF;
+.layout-left-avator {
+    margin: 30px auto;
+    width: 160px;
+    height: 160px;
+    border-radius: 160px;
+    border: 5px solid rgba(#FFF, 0.2);
+    @media screen and (max-width: $screen-xs-max) {
+        display: none;
+    }
 }
 
-.gallery-image img {
-    display: block;
-    max-width: 100%;
-    height: auto;
+.layout-left-menu {
+    margin: 0 auto;
+    ul {
+        text-align: center;
+        li {
+            @media screen and (max-width: $screen-xs-max) {
+                float: left;
+            }
+            a {
+                color: rgba($color: #FFF, $alpha: 0.75);
+                &:hover {
+                    color: rgba($color: #FFF, $alpha: 1.0);
+                    background: transparent;
+                }
+            }
+        }
+    }
+}
+
+.layout-right {
+    padding-left: 220px;
+    min-height: 100vh;
+    @media screen and (max-width: $screen-xs-max) {
+        padding-left: 0;
+    }
 }
